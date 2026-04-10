@@ -1,0 +1,71 @@
+FREQUENTLY ASKED QUESTIONS — IDP Knowledge Base
+================================================
+
+DOCUMENT SUBMISSION
+--------------------
+Q: Which documents are required for admission?
+A: The following documents are mandatory for all applicants:
+   1. 10th grade marksheet (PDF or clear image — JPG/PNG)
+   2. 12th grade marksheet (PDF or clear image — JPG/PNG)
+   3. Aadhar card — front side (PDF or clear image — JPG/PNG)
+   Additional documents may be required for specific courses or quota categories.
+
+Q: What file formats are accepted for document upload?
+A: Accepted formats are PDF, JPG (JPEG), and PNG. Maximum file size is 10 MB per document.
+
+Q: Can I upload a mobile photo of my document?
+A: Yes, mobile photos are accepted provided the document is clearly visible, not blurred, and all text is readable. Ensure good lighting and avoid shadows.
+
+Q: What if my name is spelled differently across documents?
+A: Minor spelling variations (e.g., Rahul vs Rahool, Singh vs Sıngh) are acceptable and will be flagged for manual review. Major discrepancies (e.g., completely different surnames) will require a gazette notification or affidavit for name change.
+
+Q: What if my date of birth differs across documents?
+A: Date of birth must match exactly across all documents. Any mismatch will result in automatic rejection. Submit a court affidavit and gazette notification if there is a legitimate correction.
+
+ELIGIBILITY QUERIES
+--------------------
+Q: What is the minimum percentage required for B.Tech admission?
+A: For B.Tech, the minimum required percentage is 45% in 12th grade with Physics, Chemistry, and Mathematics (PCM). A minimum of 35% is required in 10th grade. SC/ST/OBC candidates get a 5% relaxation.
+
+Q: Can a Commerce student apply for B.Tech?
+A: No. B.Tech requires Science stream with Physics, Chemistry, and Mathematics (PCM) in 12th grade. Commerce stream students are not eligible for B.Tech.
+
+Q: Can an Arts student apply for BBA?
+A: Yes. BBA accepts students from any stream (Science, Commerce, or Arts) with a minimum of 45% in 12th grade.
+
+Q: Is NIOS board accepted?
+A: Yes, NIOS (National Institute of Open Schooling) is a recognised board equivalent to CBSE and is accepted for all courses.
+
+Q: Is a gap year allowed?
+A: Yes, a gap year is allowed. Applicants with a gap year must submit a self-declaration affidavit explaining the gap period.
+
+AADHAR CARD VERIFICATION
+--------------------------
+Q: Is Aadhar card mandatory?
+A: Yes, Aadhar card is the mandatory identity document. It serves as proof of identity and date of birth.
+
+Q: Which side of the Aadhar card should I upload?
+A: Please upload the front side of the Aadhar card which contains your name, date of birth, gender, and photograph.
+
+Q: My Aadhar card shows a different address than my current address. Is that a problem?
+A: No, the address on Aadhar card is not used for eligibility verification. Only name, date of birth, and gender are verified.
+
+Q: What if my Aadhar card has an old photograph?
+A: The photograph on the Aadhar card is used for identity verification by the admission officer during manual review. It does not affect automated verification.
+
+VERIFICATION PROCESS
+---------------------
+Q: How long does document verification take?
+A: Automated AI verification is completed within 2-3 minutes of document upload. Applications flagged for manual review are processed within 24 hours during admission season.
+
+Q: What does "Manual Review" status mean?
+A: Manual Review means the AI system could not automatically approve or reject the application due to low confidence in extraction, minor discrepancies, or borderline eligibility. An admission officer will review the application within 24 hours.
+
+Q: What happens after Auto-Approve?
+A: Auto-Approved applications proceed to the next step in the admission process (fee payment / counselling / merit list). You will receive an SMS and email notification.
+
+Q: What happens after Auto-Reject?
+A: Auto-Rejected applications have failed one or more critical checks (DOB mismatch, marks below minimum eligibility, 12th result FAIL). The rejection reason is provided. You may re-apply with correct documents or appeal to the admissions committee.
+
+Q: Can I re-upload a document?
+A: Yes. If a document upload fails or is rejected due to poor quality, you can re-upload the specific document without re-submitting the entire application.

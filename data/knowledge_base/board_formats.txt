@@ -1,0 +1,90 @@
+RECOGNISED EDUCATION BOARDS AND CERTIFICATE FORMATS — IDP Knowledge Base
+=========================================================================
+
+CENTRAL BOARDS (ALL-INDIA)
+---------------------------
+1. CBSE (Central Board of Secondary Education)
+   - Governing Body: Government of India, Ministry of Education
+   - 10th Certificate Name: Secondary School Certificate (SSC)
+   - 12th Certificate Name: Senior School Certificate
+   - Roll Number Format: 8-digit numeric (e.g., 12345678)
+   - Must Contain: Board seal, principal signature, student photograph
+   - Grade System: Marks out of 100 per subject + CGPA
+   - Pass Criteria: Minimum 33% in each subject
+
+2. ICSE / ISC (Council for the Indian School Certificate Examinations)
+   - Governing Body: CISCE (Council for Indian School Certificate Examinations)
+   - 10th Certificate Name: ICSE (Indian Certificate of Secondary Education)
+   - 12th Certificate Name: ISC (Indian School Certificate)
+   - Roll Number Format: 7-digit numeric
+   - Must Contain: CISCE seal, examination year, index number
+   - Grade System: Marks out of 100 per subject
+   - Pass Criteria: Minimum 35% in aggregate
+
+STATE BOARDS
+-------------
+3. Maharashtra State Board (MSBSHSE)
+   - 10th Certificate Name: SSC (Secondary School Certificate)
+   - 12th Certificate Name: HSC (Higher Secondary Certificate)
+   - Roll Number Format: 6-digit seat number
+   - Must Contain: Divisional board name, seat number, index number
+
+4. UP Board (UPMSP — Uttar Pradesh Madhyamik Shiksha Parishad)
+   - 10th Certificate Name: High School Certificate
+   - 12th Certificate Name: Intermediate Certificate
+   - Roll Number Format: Variable (district code + roll)
+   - Must Contain: Board emblem, examination centre, roll number
+
+5. Rajasthan Board (RBSE)
+   - 10th Certificate Name: Secondary School Certificate
+   - 12th Certificate Name: Senior Secondary Certificate
+   - Roll Number Format: Variable numeric
+
+6. MP Board (MPBSE — Madhya Pradesh Board of Secondary Education)
+   - 10th Certificate Name: High School Certificate
+   - 12th Certificate Name: Higher Secondary Certificate
+   - Roll Number Format: Variable numeric
+
+7. Gujarat Board (GSEB)
+   - 10th Certificate Name: Secondary School Certificate
+   - 12th Certificate Name: Higher Secondary Certificate
+   - Roll Number Format: 6-digit seat number
+
+8. CBSE Equivalent Boards (Accepted for all courses):
+   - NIOS (National Institute of Open Schooling)
+   - IGCSE/Cambridge International (with equivalency certificate)
+   - IB (International Baccalaureate) with equivalency certificate
+
+DOCUMENT VERIFICATION CHECKPOINTS FOR MARKSHEETS
+--------------------------------------------------
+A valid marksheet must contain ALL of the following:
+  ✓ Student's full name (as registered with the board)
+  ✓ Date of birth
+  ✓ Examination year
+  ✓ Roll number / seat number / index number
+  ✓ School/college name
+  ✓ Board name
+  ✓ Subject-wise marks
+  ✓ Total marks and percentage / CGPA
+  ✓ Pass / Fail result
+  ✓ Official board seal or stamp
+  ✓ Authorised signatory signature
+
+STREAM CLASSIFICATION FOR 12TH GRADE
+--------------------------------------
+Science Stream:
+  Core Subjects: Physics, Chemistry, Mathematics/Biology
+  Valid Combinations: PCM (Physics-Chemistry-Maths), PCB (Physics-Chemistry-Biology), PCMB
+
+Commerce Stream:
+  Core Subjects: Accountancy, Business Studies, Economics
+  Optional: Mathematics, Informatics Practices
+
+Arts/Humanities Stream:
+  Core Subjects: History, Geography, Political Science, Economics, Sociology
+  Optional: Psychology, Home Science, Fine Arts
+
+Vocational Stream:
+  Subject combinations vary by board
+  Accepted for: BA, BBA, general degree courses
+  Not accepted for: B.Tech, B.Sc (unless specific vocational science stream)

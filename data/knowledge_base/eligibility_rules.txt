@@ -1,0 +1,62 @@
+ADMISSION ELIGIBILITY RULES — IDP Knowledge Base
+=================================================
+
+GENERAL ELIGIBILITY REQUIREMENTS
+----------------------------------
+1. All applicants must have passed 10th grade (Class X / SSC / Matriculation) from a recognised board.
+2. All applicants must have passed 12th grade (Class XII / HSC / Intermediate / Plus Two) from a recognised board.
+3. A valid government-issued photo ID is mandatory. Aadhar card is the accepted identity document.
+4. All submitted documents must be original or certified true copies.
+5. Name on all documents must match. Minor spelling variations are acceptable but must be flagged for manual review.
+6. Date of Birth must be identical across all submitted documents.
+
+MINIMUM PERCENTAGE REQUIREMENTS BY COURSE
+-------------------------------------------
+B.Tech (Bachelor of Technology):
+  - 10th Minimum: 35%
+  - 12th Minimum: 45% in Physics, Chemistry, Mathematics (PCM stream)
+  - Stream Required: Science with PCM
+
+B.Sc (Bachelor of Science):
+  - 10th Minimum: 35%
+  - 12th Minimum: 45% in Science stream
+  - Stream Required: Science
+
+B.Com (Bachelor of Commerce):
+  - 10th Minimum: 35%
+  - 12th Minimum: 45% in Commerce or Arts stream
+  - Stream Required: Commerce or Arts
+
+BBA (Bachelor of Business Administration):
+  - 10th Minimum: 35%
+  - 12th Minimum: 45% in any stream
+  - Stream Required: Any
+
+BA (Bachelor of Arts):
+  - 10th Minimum: 35%
+  - 12th Minimum: 40% in any stream
+  - Stream Required: Any
+
+MBA (Master of Business Administration):
+  - Graduation Minimum: 50% in any discipline
+  - Work experience preferred but not mandatory
+
+M.Tech (Master of Technology):
+  - B.Tech/B.E. Minimum: 55% in relevant engineering discipline
+  - GATE score preferred
+
+SPECIAL CASES AND EXCEPTIONS
+------------------------------
+1. SC/ST/OBC candidates: 5% relaxation in minimum percentage for all courses.
+2. Differently-abled candidates: 5% relaxation in minimum percentage for all courses.
+3. Sports quota: 5% relaxation subject to state-level or national-level participation certificate.
+4. NRI/Foreign nationals: Must submit equivalent qualification certificates with notarised translation.
+5. Gap year: Applicants with gap year must submit a self-declaration affidavit.
+
+DOCUMENT AUTHENTICITY REQUIREMENTS
+------------------------------------
+1. All marksheets must carry the official board seal/stamp.
+2. Roll number must be present on marksheets.
+3. Aadhar card must show the applicant's current photograph.
+4. Documents with corrections/overwriting must be countersigned by issuing authority.
+5. Photocopies must be self-attested by the applicant.

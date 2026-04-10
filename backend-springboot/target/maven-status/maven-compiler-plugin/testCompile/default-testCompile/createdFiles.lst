@@ -1,0 +1,6 @@
+com/idp/erp/service/ApplicationServiceTest.class
+com/idp/erp/service/VerificationServiceTest.class
+com/idp/erp/controller/ApplicationControllerTest.class
+com/idp/erp/service/StudentServiceTest.class
+com/idp/erp/client/AiServiceClientTest.class
+com/idp/erp/controller/StudentControllerTest.class

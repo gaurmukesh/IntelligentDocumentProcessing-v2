@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.idp.erp.client.AiServiceClientTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.110 s -- in com.idp.erp.client.AiServiceClientTest
