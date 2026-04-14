@@ -59,7 +59,16 @@ async def process_message(message: dict):
         await db.commit()
 
         try:
-            extracted_data, confidence = extract_document(file_path, doc_type)
+            from app.services.storage import download_to_temp
+            import os
+            local_path = download_to_temp(file_path)
+            extracted_data, confidence = extract_document(local_path, doc_type)
+            # Clean up temp file if it was downloaded from S3
+            if local_path != file_path:
+                try:
+                    os.unlink(local_path)
+                except OSError:
+                    pass
             extraction = ExtractionResult(
                 document_id=document_id,
                 application_id=application_id,

@@ -11,11 +11,19 @@ class Settings(BaseSettings):
     # Database
     database_url: str = "sqlite+aiosqlite:///./data/idp.db"
 
-    # Storage
+    # Storage — local dev uses upload_dir; production uses S3-compatible Object Storage
     upload_dir: str = "./data/uploads"
+    s3_endpoint_url: str = ""          # e.g. https://sgp1.digitaloceanspaces.com (Lightsail uses AWS S3 natively)
+    s3_access_key: str = ""
+    s3_secret_key: str = ""
+    s3_region: str = "ap-south-1"
+    s3_bucket_name: str = "idp-uploads"
 
     # Vector DB (Qdrant)
+    # Local dev: uses qdrant_path (file-based). Production: uses qdrant_host + qdrant_port (server mode).
     qdrant_path: str = "./qdrant_db"
+    qdrant_host: str = "localhost"
+    qdrant_port: int = 6333
     qdrant_collection_name: str = "idp_knowledge_base"
 
     # App

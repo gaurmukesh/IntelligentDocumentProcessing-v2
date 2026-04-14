@@ -35,7 +35,9 @@ TOP_K = 4             # number of chunks to retrieve per query
 # ── Qdrant client + vector store ──────────────────────────────────
 
 def _get_qdrant_client() -> QdrantClient:
-    """Return Qdrant client — in-memory for local dev."""
+    """Return Qdrant client — file-based for dev, server mode for production."""
+    if settings.app_env == "production":
+        return QdrantClient(host=settings.qdrant_host, port=settings.qdrant_port)
     return QdrantClient(path=settings.qdrant_path)
 
 

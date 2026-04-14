@@ -10,6 +10,7 @@ from app.models.document import Document, DocumentType, DocumentStatus, Extracti
 from app.models.schemas import DocumentUploadResponse, DocumentResponse, ExtractionResultResponse
 from app.core.config import settings
 from app.services.kafka_producer import send_extraction_job
+from app.services.storage import upload_file
 
 router = APIRouter()
 
@@ -50,23 +51,18 @@ async def upload_document(
             detail=f"File size {size_mb:.1f}MB exceeds limit of {MAX_FILE_SIZE_MB}MB"
         )
 
-    # Save to local disk: data/uploads/{application_id}/{doc_type}_{uuid}{ext}
-    upload_dir = Path(settings.upload_dir) / application_id
-    upload_dir.mkdir(parents=True, exist_ok=True)
-
+    # Save to storage (local disk in dev, Lightsail Object Storage in production)
     ext = Path(file.filename).suffix.lower()
     file_name = f"{doc_type.value}_{uuid.uuid4().hex[:8]}{ext}"
-    file_path = upload_dir / file_name
+    storage_key = f"{application_id}/{file_name}"
+    file_ref = upload_file(contents, storage_key)
 
-    with open(file_path, "wb") as f:
-        f.write(contents)
-
-    # Save document record to SQLite
+    # Save document record to DB
     doc = Document(
         application_id=application_id,
         doc_type=doc_type,
         file_name=file_name,
-        file_path=str(file_path),
+        file_path=file_ref,
         status=DocumentStatus.PENDING,
     )
     db.add(doc)

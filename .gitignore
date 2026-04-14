@@ -1,2 +1,16 @@
 .env
 **/.env
+.env.prod
+.env.local
+.env.*.local
+frontend-react/.env.production
+frontend-react/dist/
+__pycache__/
+**/__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+**/node_modules/
+.DS_Store
+**/.DS_Store
+backend-fastapi/data/uploads/

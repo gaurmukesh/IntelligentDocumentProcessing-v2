@@ -1,0 +1,136 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Local production simulation — mirrors the Lightsail setup.
+# Use this to test the production config before deploying to Lightsail.
+#
+# On Lightsail:
+#   - postgres   → Lightsail Managed Database
+#   - kafka      → Lightsail nano instance
+#   - qdrant     → Lightsail nano instance
+#   - fastapi    → Lightsail Container Service
+#   - frontend   → Lightsail Object Storage (static website)
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ─── PostgreSQL (mirrors Lightsail Managed Database) ──────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: idp-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: idp
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d idp"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── Qdrant (mirrors Lightsail nano instance) ─────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: idp-qdrant
+    restart: unless-stopped
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:6333/healthz || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── Kafka (mirrors Lightsail nano instance) ──────────────────────────────
+  kafka:
+    image: apache/kafka:latest
+    container_name: idp-kafka
+    restart: unless-stopped
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_NUM_PARTITIONS: 3
+      KAFKA_DEFAULT_REPLICATION_FACTOR: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD", "/opt/kafka/bin/kafka-topics.sh", "--bootstrap-server", "localhost:9092", "--list"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  # ─── FastAPI (mirrors Lightsail Container Service) ────────────────────────
+  fastapi:
+    build:
+      context: ./backend-fastapi
+      dockerfile: Dockerfile
+    container_name: idp-fastapi
+    restart: unless-stopped
+    env_file: .env.prod
+    environment:
+      APP_ENV: production
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/idp
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # ─── Kafka Consumer (mirrors second container in Lightsail deployment) ─────
+  kafka-consumer:
+    build:
+      context: ./backend-fastapi
+      dockerfile: Dockerfile
+    container_name: idp-kafka-consumer
+    restart: unless-stopped
+    env_file: .env.prod
+    environment:
+      APP_ENV: production
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/idp
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+    command: ["python", "-m", "app.services.kafka_consumer"]
+    depends_on:
+      fastapi:
+        condition: service_healthy
+
+  # ─── React Frontend (run locally for testing; on Lightsail → Object Storage)
+  frontend:
+    build:
+      context: ./frontend-react
+      dockerfile: Dockerfile
+    container_name: idp-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - fastapi
+
+volumes:
+  postgres_data:
+  qdrant_data:
+  kafka_data:
